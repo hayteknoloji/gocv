@@ -49,9 +49,8 @@ func TestFreeTypePutText(t *testing.T) {
 	defer img.Close()
 
 	pt := image.Pt(80, 80)
-	ft.PutText(&img, "Testing", pt, 60, color.RGBA{R: 255, G: 255, B: 255}, -1, 8, true)
+	ft.PutText(&img, "Bismillah", pt, 60, color.RGBA{R: 255, G: 255, B: 255}, -1, 8, true)
 
-	//resmi kaydet
 	gocv.IMWrite("test.png", img)
 
 	if img.Empty() {
